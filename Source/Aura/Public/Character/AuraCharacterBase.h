@@ -96,6 +96,9 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Combat")
 	UNiagaraSystem* BloodEffect;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Combat")
+	USoundBase* DeathSound;
 private:
 	UPROPERTY(EditAnywhere, Category = "Attributes")
 	TArray<TSubclassOf<UGameplayAbility>> StartupAbilities;
