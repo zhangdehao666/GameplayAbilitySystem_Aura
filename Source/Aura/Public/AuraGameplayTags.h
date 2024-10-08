@@ -69,6 +69,7 @@ struct FAuraGameplayTags
 	FGameplayTag Abilities_Type_None;
 	
 	FGameplayTag Abilities_Fire_FireBolt;
+	FGameplayTag Abilities_Lightning_Electrocute;
 	
 	FGameplayTag Cooldown_Fire_FireBolt;
 
