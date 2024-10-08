@@ -54,11 +54,11 @@ void UOverlayWidgetController::BindCallbacksToDependencies()
 	{
 		if (GetAuraASC()->bStartupAbilitiesGiven)
 		{
-			BroadcastInitialValues();
+			BroadcastAbilityInfo();
 		}
 		else
 		{
-			GetAuraASC()->AbilitiesGivenDelegate.AddUObject(this, &UAuraWidgetController::BroadcastInitialValues);
+			GetAuraASC()->AbilitiesGivenDelegate.AddUObject(this, &UAuraWidgetController::BroadcastAbilityInfo);
 		}
 		GetAuraASC()->EffectAssetTags.AddLambda(
 			[this](const FGameplayTagContainer& AssetTags)
