@@ -10,7 +10,8 @@
 
 struct FGameplayTag;
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FSpellGlobeSelectedSignature, bool, bSpellPointsButtonEnabled, bool, bEquipButtonEnabled);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_FourParams(FSpellGlobeSelectedSignature, bool, bSpellPointsButtonEnabled, bool, bEquipButtonEnabled, FString,
+	DescriptionString, FString, NextLevelDescriptionString);
 
 struct FSelectedAbility
 {
