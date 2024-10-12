@@ -37,12 +37,12 @@ public:
 	virtual int32 GetMinionCount_Implementation() override;
 	virtual void IncrementMinionCout_Implementation(int32 Amount) override;
 	virtual ECharacterClass GetCharacterClass_Implementation() override;
-	virtual FOnASCRegistered GetOnASCRegisteredDelegate() override;
-	virtual FOnDeath GetOnDeathDelegate() override;
+	virtual FOnASCRegistered& GetOnASCRegisteredDelegate() override;
+	virtual FOnDeathSignature& GetOnDeathDelegate() override;
 	virtual USkeletalMeshComponent* GetWeapon_Implementation() override;
 
 	FOnASCRegistered OnAscRegistered;
-	FOnDeath OnDeath;
+	FOnDeathSignature OnDeathDelegate;
 	/** end Combat Interface */
 
 	UFUNCTION(NetMulticast, Reliable)
