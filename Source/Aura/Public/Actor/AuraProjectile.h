@@ -37,14 +37,15 @@ protected:
 	UFUNCTION()
 	virtual void OnSphereOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSwimming,
 		const FHitResult& SwimmingResult);
+
+	UPROPERTY(VisibleAnywhere)
+	TObjectPtr<USphereComponent> Sphere;
+
+	bool IsValidOverlap(AActor* OtherActor);
+	bool bHit = false;
 private:
 	UPROPERTY(EditDefaultsOnly)
 	float LifeSpan = 15.f;
-	
-	bool bHit = false;
-	
-	UPROPERTY(VisibleAnywhere)
-	TObjectPtr<USphereComponent> Sphere;
 
 	UPROPERTY(EditAnywhere)
 	TObjectPtr<UNiagaraSystem> ImpactEffect;
